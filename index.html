@@ -2,11 +2,9 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Services pour animaux | Animaux Care</title>
-  <meta name="description" content="Plateforme de services pour animaux : toilettage, hôtel, garderie de jour, éducation canine, soins vétérinaires et adoption." />
-</head>
-
+<meta name="description" content="Plateforme de services pour animaux : toilettage, hôtel, garderie de jour, éducation canine, soins vétérinaires et adoption." />
 
 <style>
 body {
@@ -16,7 +14,7 @@ body {
   color: #4B3A2E;
 }
 
-
+/* HEADER */
 header {
   background-color: #9E9086;
   padding: 20px;
@@ -29,7 +27,7 @@ header h1 {
   font-size: 32px;
 }
 
-
+/* MENU LATÉRAL */
 .menu {
   position: fixed;
   left: 0;
@@ -53,7 +51,7 @@ header h1 {
   text-decoration: underline;
 }
 
-
+/* ARTICLE */
 article {
   margin-left: 190px;
   padding: 30px;
@@ -73,17 +71,35 @@ article h2 {
   margin-top: 20px;
 }
 
-
+/* FOOTER */
 footer {
   background-color: #9E9086;
   color: white;
   text-align: center;
-  padding: 15px;
+  padding: 25px 15px;
   margin-top: 40px;
   border-radius: 10px 10px 0 0;
+  font-size: 15px;
 }
 
+footer .footer-links {
+  margin-bottom: 10px;
+}
+footer .footer-links a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+footer .footer-links a:hover {
+  text-decoration: underline;
+}
 
+footer .socials {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .menu {
     position: relative;
@@ -130,21 +146,18 @@ footer {
   </article>
 
   <footer>
-    © Animaux Care, 2025 — Fait avec ❤️ en France
+    <div class="footer-links">
+      <a href="#contact">📧 Contact</a> |
+      <a href="#about">À propos</a> |
+      <a href="#legal">Mentions légales</a>
+    </div>
+    <div class="socials">
+      🐾 Suivez-nous : 
+      <a href="#">Facebook</a> · 
+      <a href="#">Instagram</a> · 
+      <a href="#">X (Twitter)</a>
+    </div>
+    <p>© Animaux Care, 2025 — Fait avec ❤️ en France</p>
   </footer>
 </body>
 </html>
-
-
-
-    
-<body>
-
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
-
-</body>
-</html>
-
-
-
