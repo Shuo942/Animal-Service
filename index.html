@@ -167,6 +167,38 @@ article{
   opacity:.9;
 }
 
+/* ====== GALERIE 模块 ====== */
+.gallery-section{
+  max-width:1100px;
+  margin:30px auto 20px;
+  background:#fff;
+  padding:24px 28px;
+  border-radius:14px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.05);
+}
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  gap:16px;
+  margin-top:16px;
+}
+.gallery-card{
+  background:#f9fafb;
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid #e3e8ec;
+}
+.gallery-card img,
+.gallery-card video{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+.gallery-card p{
+  margin:8px 10px 12px;
+  font-size:14px;
+}
+
 /* ====== 页脚 ====== */
 footer{
   background:var(--brand);
@@ -201,7 +233,7 @@ footer .socials{margin-top:10px;font-size:17px;}
   <div class="nav-wrap">
     <ul class="nav-list">
 
-      <li><a href="index.html#home">Accueil</a></li>
+      <li><a href="#home">Accueil</a></li>
 
       <li class="dropdown">
         <a href="#">Services ▼</a>
@@ -217,7 +249,8 @@ footer .socials{margin-top:10px;font-size:17px;}
 
       <li><a href="#shop">Shop</a></li>
 
-      <li><a href="galerie.html">Galerie</a></li>
+      <!-- Galerie 链接到本页下方的 galerie 区块 -->
+      <li><a href="#galerie">Galerie</a></li>
 
     </ul>
   </div>
@@ -250,22 +283,54 @@ footer .socials{margin-top:10px;font-size:17px;}
 
     <!-- Chiens -->
     <div class="shop-card">
-      <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800" />
+      <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800" alt="Produits pour chiens" />
       <a class="btn" href="#">Pour les chiens</a>
     </div>
 
     <!-- Chats -->
     <div class="shop-card">
-      <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=800" />
+      <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=800" alt="Produits pour chats" />
       <a class="btn" href="#">Pour les chats</a>
     </div>
 
     <!-- Autres animaux -->
     <div class="shop-card">
-      <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=800" />
+      <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=800" alt="Produits pour autres animaux" />
       <a class="btn" href="#">Pour d'autres animaux</a>
     </div>
 
+  </div>
+</section>
+
+<!-- ====== GALERIE ====== -->
+<section id="galerie" class="gallery-section">
+  <h2>Galerie</h2>
+  <p>Quelques photos et souvenirs de nos amis à quatre pattes.</p>
+
+  <div class="gallery-grid">
+    <div class="gallery-card">
+      <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=800" alt="Chiot heureux">
+      <p>Chiot après une séance de jeu.</p>
+    </div>
+
+    <div class="gallery-card">
+      <img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?w=800" alt="Chiens qui jouent">
+      <p>Promenade en groupe avec le pet-sitter.</p>
+    </div>
+
+    <div class="gallery-card">
+      <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=800" alt="Chat détendu">
+      <p>Chat détendu après sa visite.</p>
+    </div>
+
+    <div class="gallery-card">
+      <!-- 这里把 src 换成你自己的视频文件路径 -->
+      <video controls>
+        <source src="video-chien.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la vidéo.
+      </video>
+      <p>Vidéo : séance de jeu avec un chien.</p>
+    </div>
   </div>
 </section>
 
@@ -289,4 +354,5 @@ footer .socials{margin-top:10px;font-size:17px;}
 
 </body>
 </html>
+
 
