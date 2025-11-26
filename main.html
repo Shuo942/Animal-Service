@@ -7,7 +7,6 @@
 <meta name="description" content="Plateforme de services pour animaux : toilettage, hôtel, garderie de jour, éducation canine, soins vétérinaires et adoption." />
 
 <style>
-/* --- STYLES GÉNÉRAUX --- */
 body {
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
@@ -42,7 +41,6 @@ header h1 {
   border-radius: 0 10px 10px 0;
   font-size: 16px;
   line-height: 1.8;
-  overflow-y: auto; /* Permet de scroller si le menu est trop long */
 }
 
 .menu a {
@@ -50,18 +48,15 @@ header h1 {
   color: white;
   text-decoration: none;
   margin-bottom: 8px;
-  transition: opacity 0.3s;
 }
 
 .menu a:hover {
   text-decoration: underline;
-  opacity: 0.9;
 }
 
-/* ARTICLE PRINCIPAL */
+/* ARTICLE */
 article {
-  margin-left: 210px; /* Ajusté pour laisser de l'espace au menu */
-  margin-right: 20px;
+  margin-left: 190px;
   padding: 30px;
   background-color: #FFF1CC;
   min-height: 400px;
@@ -71,8 +66,6 @@ article {
 
 article h2 {
   color: #9E9086;
-  border-bottom: 2px solid #FFF8F0;
-  padding-bottom: 10px;
 }
 
 .exemple {
@@ -81,67 +74,6 @@ article h2 {
   border-left: 5px solid #9E9086;
   border-radius: 8px;
   margin-top: 20px;
-}
-
-/* --- NOUVEAUX STYLES FAQ --- */
-.faq-section {
-  margin-top: 50px;
-  background-color: #FFF8F0; /* Fond clair pour démarquer la section */
-  padding: 25px;
-  border-radius: 12px;
-  border: 2px solid #fff; /* Bordure blanche pour le style */
-}
-
-.faq-section h2 {
-  margin-top: 0;
-  color: #4B3A2E;
-  border-bottom: none;
-}
-
-.faq-item {
-  background-color: white;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
-
-.faq-item summary {
-  padding: 15px;
-  font-weight: bold;
-  cursor: pointer;
-  list-style: none; /* Enlève la flèche par défaut */
-  position: relative;
-  background-color: #fff;
-  color: #4B3A2E;
-  transition: background-color 0.3s;
-}
-
-.faq-item summary:hover {
-  background-color: #f9f9f9;
-}
-
-/* Le signe + à droite */
-.faq-item summary::after {
-  content: '+';
-  position: absolute;
-  right: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #9E9086;
-}
-
-/* Le signe - quand c'est ouvert */
-.faq-item[open] summary::after {
-  content: '−';
-}
-
-.faq-item p {
-  padding: 0 15px 15px 15px;
-  margin: 0;
-  color: #665;
-  line-height: 1.6;
-  border-top: 1px solid #eee;
 }
 
 /* FOOTER */
@@ -181,20 +113,10 @@ footer .socials {
     width: auto;
     height: auto;
     border-radius: 0;
-    top: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-  
-  .menu a {
-    margin: 0 5px;
   }
 
   article {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 0;
   }
 }
 </style>
@@ -207,14 +129,13 @@ footer .socials {
 
   <div class="menu">
     <strong>Nos Services :</strong>
-    <a href="#">🐕 Toilettage</a>
+    <a href="#grooming">🐕 Toilettage</a>
     <a href="#hotel">🏠 Pension</a>
     <a href="#daycamp">🎾 Garderie</a>
     <a href="#training">🎓 Éducation</a>
     <a href="#vet">🏥 Soins Vétérinaires</a>
     <a href="#adoption">❤️ Adoption</a>
-    <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.5); margin: 10px 0;">
-    <a href="#faq">❓ FAQ</a> </div>
+  </div>
 
   <article>
     <h2>Bienvenue sur PawCare !</h2>
@@ -230,31 +151,7 @@ footer .socials {
       <h3>💡 Conseil du Jour</h3>
       <p>Un chien heureux, c’est un chien qui sort ! Offrez-lui une promenade quotidienne de 30 minutes minimum.</p>
     </div>
-    
-    <div id="faq" class="faq-section">
-        <h2>Questions Fréquentes (FAQ)</h2>
-        
-        <details class="faq-item">
-            <summary>Quelle nourriture mon animal mangera-t-il ?</summary>
-            <p>Nous nous efforçons de reproduire l'alimentation que votre chat ou chien a à la maison. Nous proposons une gamme variée (Whiskas, Sheba, Gourmet, etc.) et des croquettes Eukanuba. Si votre animal suit un régime spécial, vous pouvez apporter sa propre nourriture.</p>
-        </details>
-        
-        <details class="faq-item">
-            <summary>Pouvez-vous donner de la nourriture crue (BARF) ?</summary>
-            <p>Oui, nous pouvons stocker et servir de la nourriture crue si vous la fournissez. Nous disposons de réfrigérateurs et congélateurs dédiés pour garantir la fraîcheur des aliments.</p>
-        </details>
-        
-        <details class="faq-item">
-            <summary>Quel est l'horaire des repas à l'hôtel ?</summary>
-            <p>Les repas sont servis deux fois par jour : à 8h00 le matin et à 18h00 le soir. Les croquettes peuvent être laissées en libre-service si c'est l'habitude de votre animal.</p>
-        </details>
-
-        <details class="faq-item">
-            <summary>Mon chat utilise une fontaine à eau, est-ce possible ?</summary>
-            <p>Tout à fait ! Nous encourageons les propriétaires à apporter les objets familiers de leurs animaux, y compris les fontaines à eau, pour réduire le stress durant le séjour.</p>
-        </details>
-    </div>
-    </article>
+  </article>
 
   <footer>
     <div class="footer-links">
