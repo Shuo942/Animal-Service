@@ -83,8 +83,13 @@ details summary {
   color: #4B3A2E;
 }
 
-details p {
+details .anchor {
   margin-top: 10px;
+  color: #9E9086;
+}
+
+details p {
+  margin-top: 8px;
 }
 
 /* FOOTER */
@@ -154,39 +159,63 @@ footer .socials {
     Trouvez facilement un service fiable pour votre compagnon.</p>
 
     <!-- Toilettage -->
-    <details id="grooming">
+    <details>
       <summary>🐕 Toilettage</summary>
-      <p>Service complet : bain, brossage, coupe, soins des griffes.</p>
+      <h3 id="grooming" class="anchor">Toilettage — Détails</h3>
+      <p>• Bain complet avec shampooing hypoallergénique<br>
+         • Séchage professionnel<br>
+         • Coupe stylisée selon la race<br>
+         • Soins des griffes et nettoyage oreilles</p>
+      <p>Notre équipe utilise des produits 100% bio pour respecter la peau de votre animal.</p>
     </details>
 
     <!-- Pension -->
-    <details id="hotel">
+    <details>
       <summary>🏠 Pension</summary>
-      <p>Hébergement confortable pour chiens et chats avec surveillance 24/7.</p>
+      <h3 id="hotel" class="anchor">Pension — Détails</h3>
+      <p>• Chambres individuelles climatisées<br>
+         • Sorties quotidiennes<br>
+         • Caméras pour suivre votre animal à distance<br>
+         • Alimentation premium incluse</p>
     </details>
 
     <!-- Garderie -->
-    <details id="daycamp">
+    <details>
       <summary>🎾 Garderie</summary>
-      <p>Garderie de jour avec jeux, activités, socialisation et promenades.</p>
+      <h3 id="daycamp" class="anchor">Garderie — Détails</h3>
+      <p>• Jeux encadrés par nos animateurs<br>
+         • Interactions sociales<br>
+         • Ateliers ludiques (agility, puzzles, jeux d’odorat)</p>
     </details>
 
     <!-- Éducation -->
-    <details id="training">
+    <details>
       <summary>🎓 Éducation</summary>
-      <p>Cours individuels ou collectifs avec éducateurs certifiés.</p>
+      <h3 id="training" class="anchor">Éducation — Détails</h3>
+      <p>• Apprentissage des commandes de base<br>
+         • Correction des comportements difficiles<br>
+         • Cours individuels ou de groupe<br>
+         • Méthodes positives uniquement</p>
     </details>
 
-    <!-- Soins vétérinaires -->
-    <details id="vet">
+    <!-- Vétérinaire -->
+    <details>
       <summary>🏥 Soins Vétérinaires</summary>
-      <p>Consultations, vaccins, urgences et suivi santé.</p>
+      <h3 id="vet" class="anchor">Soins Vétérinaires — Détails</h3>
+      <p>• Consultations générales<br>
+         • Vaccinations<br>
+         • Radiologie & analyses<br>
+         • Urgences 24/7</p>
     </details>
 
     <!-- Adoption -->
-    <details id="adoption">
+    <details>
       <summary>❤️ Adoption</summary>
-      <p>Trouvez un nouveau compagnon parmi nos animaux en recherche de famille.</p>
+      <h3 id="adoption" class="anchor">Adoption — Détails</h3>
+      <p>• Chiens et chats disponibles<br>
+         • Accompagnement administratif<br>
+         • Rencontre avec les familles d’accueil<br>
+         • Conseils pour l’intégration du nouvel animal</p>
     </details>
 
   </article>
@@ -207,24 +236,26 @@ footer .socials {
   </footer>
 
 <script>
-  // Open <details> when navigated via menu anchor
-  if (location.hash) {
-    const section = document.querySelector(location.hash);
-    if (section && section.tagName.toLowerCase() === "details") {
-      section.setAttribute("open", "true");
-    }
-  }
-
+  // Auto-open <details> when navigating via side menu
   document.querySelectorAll('.menu a').forEach(link => {
     link.addEventListener('click', () => {
       const target = document.querySelector(link.getAttribute("href"));
-      if (target && target.tagName.toLowerCase() === "details") {
-        target.setAttribute("open", "true");
+      if (target) {
+        const parent = target.closest("details");
+        if (parent) parent.setAttribute("open", "true");
       }
     });
   });
+
+  // If loaded with a hash, auto-open the correct <details>
+  if (location.hash) {
+    const target = document.querySelector(location.hash);
+    if (target) {
+      const parent = target.closest("details");
+      if (parent) parent.setAttribute("open", "true");
+    }
+  }
 </script>
 
 </body>
 </html>
-
