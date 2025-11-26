@@ -73,23 +73,13 @@ details {
   padding: 15px;
   border-left: 5px solid #9E9086;
   border-radius: 8px;
-  margin-top: 20px;
-  cursor: pointer;
+  margin-top: 10px;
 }
 
 details summary {
   font-size: 18px;
   font-weight: bold;
-  color: #4B3A2E;
-}
-
-details .anchor {
-  margin-top: 10px;
-  color: #9E9086;
-}
-
-details p {
-  margin-top: 8px;
+  cursor: pointer;
 }
 
 /* FOOTER */
@@ -122,7 +112,6 @@ footer .socials {
   font-size: 18px;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .menu {
     position: relative;
@@ -155,67 +144,48 @@ footer .socials {
 
   <article>
     <h2>Bienvenue sur PawCare !</h2>
-    <p>Nous aimons les animaux autant que vous 🐶🐱  
-    Trouvez facilement un service fiable pour votre compagnon.</p>
+    <p>Nous aimons les animaux autant que vous 🐶🐱</p>
 
     <!-- Toilettage -->
+    <h3 id="grooming">🐕 Toilettage</h3>
     <details>
-      <summary>🐕 Toilettage</summary>
-      <h3 id="grooming" class="anchor">Toilettage — Détails</h3>
-      <p>• Bain complet avec shampooing hypoallergénique<br>
-         • Séchage professionnel<br>
-         • Coupe stylisée selon la race<br>
-         • Soins des griffes et nettoyage oreilles</p>
-      <p>Notre équipe utilise des produits 100% bio pour respecter la peau de votre animal.</p>
+      <summary>Voir les détails</summary>
+      <p>Bain, coupe, séchage, soins complets…</p>
     </details>
 
     <!-- Pension -->
+    <h3 id="hotel">🏠 Pension</h3>
     <details>
-      <summary>🏠 Pension</summary>
-      <h3 id="hotel" class="anchor">Pension — Détails</h3>
-      <p>• Chambres individuelles climatisées<br>
-         • Sorties quotidiennes<br>
-         • Caméras pour suivre votre animal à distance<br>
-         • Alimentation premium incluse</p>
+      <summary>Voir les détails</summary>
+      <p>Chambres individuelles, caméras, sorties quotidiennes…</p>
     </details>
 
     <!-- Garderie -->
+    <h3 id="daycamp">🎾 Garderie</h3>
     <details>
-      <summary>🎾 Garderie</summary>
-      <h3 id="daycamp" class="anchor">Garderie — Détails</h3>
-      <p>• Jeux encadrés par nos animateurs<br>
-         • Interactions sociales<br>
-         • Ateliers ludiques (agility, puzzles, jeux d’odorat)</p>
+      <summary>Voir les détails</summary>
+      <p>Jeux, activités, socialisation…</p>
     </details>
 
     <!-- Éducation -->
+    <h3 id="training">🎓 Éducation</h3>
     <details>
-      <summary>🎓 Éducation</summary>
-      <h3 id="training" class="anchor">Éducation — Détails</h3>
-      <p>• Apprentissage des commandes de base<br>
-         • Correction des comportements difficiles<br>
-         • Cours individuels ou de groupe<br>
-         • Méthodes positives uniquement</p>
+      <summary>Voir les détails</summary>
+      <p>Obéissance, comportement, méthodes positives…</p>
     </details>
 
     <!-- Vétérinaire -->
+    <h3 id="vet">🏥 Soins Vétérinaires</h3>
     <details>
-      <summary>🏥 Soins Vétérinaires</summary>
-      <h3 id="vet" class="anchor">Soins Vétérinaires — Détails</h3>
-      <p>• Consultations générales<br>
-         • Vaccinations<br>
-         • Radiologie & analyses<br>
-         • Urgences 24/7</p>
+      <summary>Voir les détails</summary>
+      <p>Vaccins, urgences, consultations…</p>
     </details>
 
     <!-- Adoption -->
+    <h3 id="adoption">❤️ Adoption</h3>
     <details>
-      <summary>❤️ Adoption</summary>
-      <h3 id="adoption" class="anchor">Adoption — Détails</h3>
-      <p>• Chiens et chats disponibles<br>
-         • Accompagnement administratif<br>
-         • Rencontre avec les familles d’accueil<br>
-         • Conseils pour l’intégration du nouvel animal</p>
+      <summary>Voir les détails</summary>
+      <p>Animaux disponibles, démarches, rencontres…</p>
     </details>
 
   </article>
@@ -236,26 +206,20 @@ footer .socials {
   </footer>
 
 <script>
-  // Auto-open <details> when navigating via side menu
+  // Auto-open detail when navigating with hash
   document.querySelectorAll('.menu a').forEach(link => {
     link.addEventListener('click', () => {
       const target = document.querySelector(link.getAttribute("href"));
       if (target) {
-        const parent = target.closest("details");
-        if (parent) parent.setAttribute("open", "true");
+        const details = target.nextElementSibling;
+        if (details?.tagName === "DETAILS") {
+          details.setAttribute("open", "true");
+        }
       }
     });
   });
-
-  // If loaded with a hash, auto-open the correct <details>
-  if (location.hash) {
-    const target = document.querySelector(location.hash);
-    if (target) {
-      const parent = target.closest("details");
-      if (parent) parent.setAttribute("open", "true");
-    }
-  }
 </script>
 
 </body>
 </html>
+
