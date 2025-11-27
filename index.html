@@ -45,7 +45,7 @@ header h1{
   position:sticky;top:0;z-index:1000;
   background:var(--accent);
   border-bottom:1px solid rgba(255,255,255,.15);
-  padding:10px 0;   /* 新增：让导航变更高 */
+  padding:10px 0;
 }
 .nav-wrap{
   max-width:1100px; margin:0 auto; padding:0 16px;
@@ -60,8 +60,8 @@ header h1{
   color:#fff;
   text-decoration:none;
   font-weight:600;
-  padding:16px 10px;   /* 加高 + 加宽点击区域，更好看 */
-  font-size:18px;      /* 让文字更明显 */
+  padding:16px 10px;
+  font-size:18px;
   border-bottom:2px solid transparent;
   display:inline-block;
 }
@@ -87,10 +87,10 @@ header h1{
 }
 .menu-panel a:hover{ background:#f3f3f3; }
 
-/* BANNER - 显示完整图片 */
+/* BANNER */
 .hero-banner{
   width:100%;
-  height:auto;        /* 高度自动，按比例缩放 */
+  height:auto;
   display:block;
 }
 
@@ -106,7 +106,7 @@ header h1{
   line-height:1.6;
 }
 
-/* SHOP SECTION */
+/* SHOP */
 .shop-section{
   max-width:1100px;
   margin:30px auto;
@@ -174,6 +174,97 @@ header h1{
   object-fit:cover;
 }
 
+/* ----------------------
+      FAQ NEW STYLE
+-----------------------*/
+
+.faq-section{
+  max-width:1100px;
+  margin:40px auto;
+  background:var(--card);
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.faq-section h2{
+  text-align:center;
+  font-size:30px;
+  margin-bottom:25px;
+  color:var(--brand);
+}
+
+/* category */
+.faq-category{
+  margin-top:35px;
+}
+
+.faq-category h3{
+  font-size:22px;
+  margin-bottom:15px;
+  padding-left:5px;
+  color:var(--accent);
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.faq-item{
+  margin-bottom:15px;
+  border-radius:12px;
+  overflow:hidden;
+  background:#fff;
+  border:1px solid #e5d8c9;
+}
+
+.faq-question{
+  width:100%;
+  background:#fff;
+  padding:16px;
+  font-size:18px;
+  text-align:left;
+  cursor:pointer;
+  color:var(--ink);
+  border:none;
+  outline:none;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  transition:background .2s;
+}
+
+.faq-question:hover{
+  background:rgba(200,160,120,0.12);
+}
+
+.faq-icon{
+  font-size:22px;
+  color:var(--brand);
+  transition:transform .2s;
+}
+
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  padding:0 18px;
+  background:#fff7ef;
+  color:#4a3a30;
+  font-size:16px;
+  line-height:1.6;
+  transition:max-height .3s ease, padding .3s ease;
+  border-top:1px solid #eadac3;
+}
+
+.faq-item.open .faq-answer{
+  max-height:300px;
+  padding:16px 18px;
+}
+
+.faq-item.open .faq-icon{
+  transform:rotate(90deg);
+}
+
+
 /* FOOTER */
 footer{
   background:var(--brand);
@@ -189,6 +280,7 @@ footer a{
 }
 footer a:hover{ text-decoration:underline; }
 </style>
+
 </head>
 
 <body>
@@ -221,19 +313,19 @@ footer a:hover{ text-decoration:underline; }
   </div>
 </nav>
 
-<!-- BANNER (your uploaded image) -->
+<!-- BANNER -->
 <div id="banner">
   <img src="images/Top Bienvenue-1.jpg" alt="Animaux Care Banner" class="hero-banner">
 </div>
 
-<!-- INTRO BLOCK -->
+<!-- INTRO -->
 <div class="intro-block">
   <h2>Bienvenue chez PawCare ! </h2>
-        <p class="subtitle">Plus qu'un simple service, une seconde famille pour eux.</p>
-        <p>
-          Nous savons que votre animal est unique. C'est pourquoi nous offrons des services sur-mesure pour son bonheur et votre tranquillité d'esprit.
-          Que ce soit pour une <strong>promenade sportive</strong>, une <strong>garde câline</strong> ou une <strong>mise en beauté</strong>, nous sommes là pour vous.
-        </p>
+  <p class="subtitle">Plus qu'un simple service, une seconde famille pour eux.</p>
+  <p>
+    Nous savons que votre animal est unique. C'est pourquoi nous offrons des services sur-mesure pour son bonheur et votre tranquillité d'esprit.
+    Que ce soit pour une <strong>promenade sportive</strong>, une <strong>garde câline</strong> ou une <strong>mise en beauté</strong>, nous sommes là pour vous.
+  </p>
 </div>
 
 <!-- SHOP -->
@@ -270,93 +362,115 @@ footer a:hover{ text-decoration:underline; }
   <h2>Galerie</h2>
 
   <div class="gallery-grid">
+    <div class="gallery-card"><img src="images/gallery-1.JPG"></div>
+    <div class="gallery-card"><img src="images/gallery-2.jpg"></div>
+    <div class="gallery-card"><img src="images/gallery-3.jpg"></div>
+    <div class="gallery-card"><img src="images/gallery-4.jpg"></div>
+    <div class="gallery-card"><img src="images/gallery-5.jpg"></div>
 
     <div class="gallery-card">
-      <img src="images/gallery-1.JPG" alt="Galerie image 1">
+      <video controls><source src="images/IMG_2317.mp4"></video>
     </div>
-
     <div class="gallery-card">
-      <img src="images/gallery-2.jpg" alt="Galerie image 2">
+      <video controls><source src="images/IMG_2318.mp4"></video>
     </div>
-
     <div class="gallery-card">
-      <img src="images/gallery-3.jpg" alt="Galerie image 3">
+      <video controls><source src="images/IMG_7992.mp4"></video>
     </div>
-
-    <div class="gallery-card">
-      <img src="images/gallery-4.jpg" alt="Galerie image 4">
-    </div>
-
-    <div class="gallery-card">
-      <img src="images/gallery-5.jpg" alt="Galerie image 5">
-    </div>
-
-    <div class="gallery-card">
-  <video controls>
-    <source src="images/IMG_2317.mp4" type="video/mp4">
-  </video>
-    </div>
-
- <div class="gallery-card">
-  <video controls>
-    <source src="images/IMG_2318.mp4" type="video/mp4">
-  </video>
-    </div>
-
-    <div class="gallery-card">
-  <video controls>
-    <source src="images/IMG_7992.mp4" type="video/mp4">
-  </video>
-    </div>
-
-    
   </div>
 </section>
-<!-- ⭐⭐⭐ FAQ SECTION (NEW) ⭐⭐⭐ -->
+
+
+<!-- 🟫🟫🟫 FAQ SECTION (NEW) 🟫🟫🟫 -->
 <section id="faq" class="faq-section">
-  <h2>FAQ – Questions fréquentes</h2>
+  <h2>❓ FAQ – Questions fréquentes</h2>
 
-  <details>
-    <summary>🥣 Quel type de nourriture mon animal recevra-t-il durant son séjour ?</summary>
-    <p>
-      Nous faisons de notre mieux pour respecter les habitudes alimentaires de votre animal.
-      Des croquettes premium, pâtées variées et options adaptées sont disponibles.  
-      Si votre compagnon suit un régime spécifique, nous vous invitons à fournir sa propre nourriture.
-    </p>
-  </details>
+  <!-- GENERAL -->
+  <div class="faq-category">
+    <h3>🐾 Général</h3>
 
-  <details>
-    <summary>🍗 Puis-je apporter la nourriture habituelle de mon animal ?</summary>
-    <p>
-      Oui, bien sûr ! Si votre animal a une marque préférée ou un régime particulier,
-      vous pouvez apporter sa nourriture. Nous suivrons vos indications avec précision.
-    </p>
-  </details>
+    <div class="faq-item">
+      <button class="faq-question">
+        Quels animaux acceptez-vous ?
+        <span class="faq-icon">➤</span>
+      </button>
+      <div class="faq-answer">
+        Nous accueillons chiens, chats et petits animaux (lapins, cochons d’Inde, etc.).
+      </div>
+    </div>
 
-  <details>
-    <summary>⏰ Quels sont les horaires d’alimentation ?</summary>
-    <p>
-      En général, les animaux mangent deux fois par jour (matin et soir).
-      Nous adaptons les horaires selon l’âge, le niveau d’activité ou la routine que vous nous communiquez.
-    </p>
-  </details>
+    <div class="faq-item">
+      <button class="faq-question">
+        Faut-il réserver à l’avance ?
+        <span class="faq-icon">➤</span>
+      </button>
+      <div class="faq-answer">
+        Oui, nous recommandons une réservation au moins 48h à l’avance.
+      </div>
+    </div>
+  </div>
 
-  <details>
-    <summary>💧 Mon animal utilise une fontaine à eau, est-ce possible d’en utiliser une chez vous ?</summary>
-    <p>
-      Oui ! Vous pouvez apporter la fontaine personnelle de votre animal.
-      Nous la mettrons à disposition dans sa chambre, nettoyée et branchée correctement.
-    </p>
-  </details>
+  <!-- SERVICES -->
+  <div class="faq-category">
+    <h3>🐶 Services</h3>
 
-  <details>
-    <summary>🏡 Puis-je visiter l’établissement avant de réserver ?</summary>
-    <p>
-      Bien sûr ! Les visites sont possibles sur rendez-vous.
-      Nous serons ravis de vous montrer les chambres, les espaces d’activités et d’expliquer le fonctionnement.
-    </p>
-  </details>
+    <div class="faq-item">
+      <button class="faq-question">
+        Proposez-vous un service d'urgence ?
+        <span class="faq-icon">➤</span>
+      </button>
+      <div class="faq-answer">
+        Nous offrons un service d’urgence vétérinaire 7j/7 sur rendez-vous.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Quels documents dois-je fournir ?
+        <span class="faq-icon">➤</span>
+      </button>
+      <div class="faq-answer">
+        Carnet de vaccination, informations médicales et numéro du propriétaire.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SHOP -->
+  <div class="faq-category">
+    <h3>🛍️ Boutique</h3>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Puis-je retourner un produit ?
+        <span class="faq-icon">➤</span>
+      </button>
+      <div class="faq-answer">
+        Oui, les retours sont acceptés sous 14 jours si l’article n’a pas été utilisé.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Les produits sont-ils garantis ?
+        <span class="faq-icon">➤</span>
+      </button>
+      <div class="faq-answer">
+        Tous nos produits sont garantis 1 an contre les défauts de fabrication.
+      </div>
+    </div>
+
+  </div>
+
 </section>
+
+<script>
+document.querySelectorAll(".faq-item").forEach(item=>{
+  item.querySelector(".faq-question").onclick=()=>{
+    item.classList.toggle("open");
+  };
+});
+</script>
 
 
 <!-- FOOTER -->
