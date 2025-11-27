@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Animaux Care – Services pour Animaux</title>
-<meta name="description" content="Plateforme de services pour animaux : toilettage, pension, garderie, éducation, soins vétérinaires et adoption." />
 
 <style>
-/* ====== 基础颜色 ====== */
 :root{
-  --brand:#9E9086;
-  --accent:#177e93;
-  --bg:#FFF8F0;
-  --card:#FFF1CC;
-  --ink:#4B3A2E;
+  --brand:#9E9086;       /* Header/Footer brown */
+  --accent:#177e93;      /* Navigation */
+  --bg:#F6EBD8;          /* Cream background */
+  --ink:#4B3A2E;         /* Text brown */
+  --card:#FFFDF9;        /* White-cream cards */
+  --btn:#C07A3F;         /* Warm brown button */
+  --btn-hover:#A8642D;
 }
-*{box-sizing:border-box}
+
+*{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
+
 body{
   margin:0;
   font-family:'Segoe UI', Arial, sans-serif;
-  background-color:var(--bg);
+  background:var(--bg);
   color:var(--ink);
 }
 
-/* ====== 顶部标题栏 ====== */
+/* HEADER */
 header{
-  background-color:var(--brand);
+  background:var(--brand);
   color:#fff;
   text-align:center;
   padding:14px 0;
@@ -37,99 +40,73 @@ header h1{
   font-size:32px;
 }
 
-/* ====== 顶部导航栏 ====== */
+/* NAVIGATION */
 .topnav{
-  position:sticky;top:0;z-index:1000;
+  position:sticky; top:0; z-index:1000;
   background:var(--accent);
-  border-bottom:1px solid rgba(255,255,255,.15);
 }
-
 .nav-wrap{
-  max-width:1100px;
-  margin:0 auto;
-  padding:0 16px;
-  display:flex;
-  justify-content:center;
+  max-width:1100px; margin:0 auto; padding:0 16px;
+  display:flex; justify-content:center;
 }
-
 .nav-list{
-  list-style:none;
-  display:flex;
-  justify-content:space-evenly; 
-  align-items:center;
+  list-style:none; margin:0; padding:0;
+  display:flex; justify-content:space-evenly;
   width:100%;
-  margin:0;
-  padding:0;
 }
-
-.nav-list > li{
-  position:relative;
-}
-
 .nav-list a{
-  color:#fff;
-  text-decoration:none;
+  color:#fff; text-decoration:none;
+  padding:14px 8px;
   font-weight:600;
   text-transform:lowercase;
-  padding:12px 6px;
   border-bottom:2px solid transparent;
-  display:inline-block;
 }
-.nav-list a:hover{
-  border-bottom-color:#fff;
-}
+.nav-list a:hover{ border-bottom-color:#fff; }
 
-/* ====== 下拉菜单 Services ====== */
-.dropdown:hover .menu-panel,
-.dropdown:focus-within .menu-panel{
-  opacity:1;visibility:visible;transform:translateY(0);
-}
-
+/* DROPDOWN */
+.dropdown{ position:relative; }
 .menu-panel{
-  background:#fff;
-  border-radius:12px;
-  position:absolute;
-  left:0;
-  top:100%;
-  min-width:250px;
-  margin-top:8px;
-  padding:8px;
-  border:1px solid #dfe3e6;
-  box-shadow:0 8px 20px rgba(0,0,0,0.1);
-  opacity:0;visibility:hidden;transform:translateY(6px);
-  transition:.18s ease;
+  opacity:0; visibility:hidden; transform:translateY(5px);
+  position:absolute; top:100%; left:0;
+  min-width:220px; background:#fff;
+  border-radius:10px; padding:8px;
+  box-shadow:0 6px 20px rgba(0,0,0,.15);
+  transition:.15s ease;
 }
-
+.dropdown:hover .menu-panel{
+  opacity:1; visibility:visible; transform:translateY(0);
+}
 .menu-panel a{
-  color:#24475a;
-  padding:10px 12px;
-  display:flex;
-  border-radius:8px;
+  color:#444; padding:10px;
+  display:block; text-decoration:none;
+  border-radius:6px;
 }
-.menu-panel a:hover{
-  background:#f0f7f9;
+.menu-panel a:hover{ background:#f3f3f3; }
+
+/* BANNER */
+.hero-banner{
+  width:100%;
+  height:380px;
+  object-fit:cover;
+  display:block;
 }
 
-/* ====== ACCUEIL 主内容 ====== */
-article{
+/* INTRO BLOCK */
+.intro-block{
   max-width:1100px;
   margin:20px auto;
   background:var(--card);
-  padding:30px;
-  border-radius:12px;
-}
-.exemple{
-  background:#FFE5B4;
-  padding:15px;
-  border-left:5px solid var(--brand);
-  border-radius:8px;
-  margin-top:20px;
+  padding:32px;
+  border-radius:16px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.06);
+  font-size:18px;
+  line-height:1.6;
 }
 
-/* ====== SHOP 模块 ====== */
+/* SHOP SECTION */
 .shop-section{
   max-width:1100px;
-  margin:30px auto 20px;
+  margin:30px auto;
   background:#fff;
   padding:24px 28px;
   border-radius:14px;
@@ -138,13 +115,13 @@ article{
 .shop-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:16px;
+  gap:18px;
 }
 .shop-card{
-  background:#f9fafb;
-  border:1px solid #e3e8ec;
+  background:#f9f9f9;
   border-radius:12px;
   padding:12px;
+  border:1px solid #e6e6e6;
   text-align:center;
 }
 .shop-card img{
@@ -155,22 +132,21 @@ article{
 }
 .btn{
   display:inline-block;
-  margin-top:20px;
-  padding:8px 14px;
-  background:var(--accent);
-  color:#fff;
-  text-decoration:none;
+  margin-top:14px;
+  padding:10px 16px;
+  background:var(--btn);
+  color:white;
   border-radius:999px;
+  text-decoration:none;
+  font-weight:600;
   font-size:15px;
 }
-.btn:hover{
-  opacity:.9;
-}
+.btn:hover{ background:var(--btn-hover); }
 
-/* ====== GALERIE 模块 ====== */
+/* GALERIE */
 .gallery-section{
   max-width:1100px;
-  margin:30px auto 20px;
+  margin:30px auto;
   background:#fff;
   padding:24px 28px;
   border-radius:14px;
@@ -178,15 +154,15 @@ article{
 }
 .gallery-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  grid-template-columns:repeat(auto-fill, minmax(240px,1fr));
   gap:16px;
   margin-top:16px;
 }
 .gallery-card{
-  background:#f9fafb;
+  background:#f9f9f9;
   border-radius:12px;
   overflow:hidden;
-  border:1px solid #e3e8ec;
+  border:1px solid #e6e6e6;
 }
 .gallery-card img,
 .gallery-card video{
@@ -194,33 +170,23 @@ article{
   height:220px;
   object-fit:cover;
 }
-.gallery-card p{
-  margin:8px 10px 12px;
-  font-size:14px;
-}
 
-/* ====== 页脚 ====== */
+/* FOOTER */
 footer{
   background:var(--brand);
   color:#fff;
   text-align:center;
-  padding:22px 16px;
-  border-radius:12px 12px 0 0;
+  padding:25px;
   margin-top:40px;
+  border-radius:12px 12px 0 0;
 }
 footer a{
-  color:#fff;text-decoration:none;
+  color:#fff;
+  text-decoration:none;
 }
-footer a:hover{text-decoration:underline;}
-footer .footer-links{margin-bottom:10px;}
-footer .socials{margin-top:10px;font-size:17px;}
-
-@media(max-width:768px){
-  .shop-grid{grid-template-columns:1fr;}
-}
+footer a:hover{ text-decoration:underline; }
 </style>
 </head>
-
 
 <body>
 
@@ -228,15 +194,14 @@ footer .socials{margin-top:10px;font-size:17px;}
   <h1>🐾 Animaux Care – Services pour Animaux</h1>
 </header>
 
-<!-- ====== 顶部导航 ====== -->
+<!-- NAVIGATION -->
 <nav class="topnav">
   <div class="nav-wrap">
     <ul class="nav-list">
-
-      <li><a href="#Home">Accueil</a></li>
+      <li><a href="#banner">accueil</a></li>
 
       <li class="dropdown">
-        <a href="#">Services ▼</a>
+        <a href="#">services ▼</a>
         <div class="menu-panel">
           <a href="toilettage.html">🐕 Toilettage</a>
           <a href="pension.html">🏠 Pension</a>
@@ -247,112 +212,91 @@ footer .socials{margin-top:10px;font-size:17px;}
         </div>
       </li>
 
-      <li><a href="#shop">Shop</a></li>
-
-      <!-- Galerie 链接到本页下方的 galerie 区块 -->
-      <li><a href="#galerie">Galerie</a></li>
-
+      <li><a href="#shop">shop</a></li>
+      <li><a href="#galerie">galerie</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- ====== ACCUEIL ====== -->
-<article id="home">
-  <h2>Bienvenue sur Animaux Care !</h2>
-  <p>Nous aimons les animaux autant que vous 🐶🐱  
-     Trouvez facilement un service fiable pour votre compagnon : promenade, toilettage, pension, garderie ou vétérinaire.</p>
+<!-- BANNER (your uploaded image) -->
+<div id="banner">
+  <img src="images/Top Bienvenue-1.jpg" alt="Animaux Care Banner" class="hero-banner">
+</div>
 
-  <div class="exemple">
-    <h3>✨ Exemple : Service de Toilettage</h3>
-    <p>Réservez un toiletteur certifié qui viendra chercher votre chien, l’amènera au salon de beauté, et vous le ramènera tout propre !</p>
-  </div>
+<!-- INTRO BLOCK -->
+<div class="intro-block">
+  Nous savons que votre animal est unique.<br>
+  C'est pourquoi nous offrons des services sur-mesure pour son bonheur
+  et votre tranquillité d'esprit.<br><br>
 
-  <div class="exemple">
-    <h3>💡 Conseil du Jour</h3>
-    <p>Un chien heureux, c’est un chien qui sort ! Offrez-lui une promenade quotidienne de 30 minutes minimum.</p>
-  </div>
-</article>
+  Que ce soit pour une <strong>promenade sportive</strong>,
+  une <strong>garde câline</strong> ou une <strong>mise en beauté</strong>,
+  nous sommes là pour vous.
+</div>
 
-
-<!-- ====== SHOP ====== -->
+<!-- SHOP -->
 <section id="shop" class="shop-section">
   <h2>Notre boutique</h2>
   <p>Découvrez une sélection d’articles pour le bien-être de vos animaux.</p>
 
   <div class="shop-grid">
 
-    <!-- Chiens -->
     <div class="shop-card">
-      <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800" alt="Produits pour chiens" />
+      <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800">
       <a class="btn" href="#">Pour les chiens</a>
     </div>
 
-    <!-- Chats -->
     <div class="shop-card">
-      <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=800" alt="Produits pour chats" />
+      <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=800">
       <a class="btn" href="#">Pour les chats</a>
     </div>
 
-    <!-- Autres animaux -->
     <div class="shop-card">
-      <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=800" alt="Produits pour autres animaux" />
+      <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=800">
       <a class="btn" href="#">Pour d'autres animaux</a>
     </div>
 
   </div>
 </section>
 
-<!-- ====== GALERIE ====== -->
+<!-- GALERIE -->
 <section id="galerie" class="gallery-section">
   <h2>Galerie</h2>
-  <p>Quelques photos et souvenirs de nos amis à quatre pattes.</p>
 
   <div class="gallery-grid">
+
     <div class="gallery-card">
-      <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=800" alt="Chiot heureux">
-      <p>Chiot après une séance de jeu.</p>
+      <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=800">
     </div>
 
     <div class="gallery-card">
-      <img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?w=800" alt="Chiens qui jouent">
-      <p>Promenade en groupe avec le pet-sitter.</p>
+      <img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?w=800">
     </div>
 
     <div class="gallery-card">
-      <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=800" alt="Chat détendu">
-      <p>Chat détendu après sa visite.</p>
+      <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=800">
     </div>
 
     <div class="gallery-card">
-      <!-- 这里把 src 换成你自己的视频文件路径 -->
       <video controls>
         <source src="video-chien.mp4" type="video/mp4">
-        Votre navigateur ne supporte pas la vidéo.
       </video>
-      <p>Vidéo : séance de jeu avec un chien.</p>
     </div>
+
   </div>
 </section>
 
-
-<!-- ====== FOOTER ====== -->
+<!-- FOOTER -->
 <footer>
-  <div class="footer-links">
-    <a href="mailto:contact@AnimauxCare.com">Contact</a> |
-    <a href="a-propos.html">À propos</a> |
-    <a href="mentions-legales.html">Mentions légales</a>
-  </div>
-
-  <div class="socials">
-    Suivez-nous :  
-    <a href="https://facebook.com" target="_blank">Facebook</a> ·
-    <a href="https://instagram.com" target="_blank">Instagram</a>
-  </div>
+  <a href="mailto:contact@AnimauxCare.com">Contact</a> |
+  <a href="a-propos.html">À propos</a> |
+  <a href="mentions-legales.html">Mentions légales</a>
 
   <p>© Animaux Care, 2025 — Fait avec ❤️ en France</p>
 </footer>
 
 </body>
 </html>
+
 
 
