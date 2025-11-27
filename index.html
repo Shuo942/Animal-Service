@@ -45,7 +45,7 @@ header h1{
   position:sticky;top:0;z-index:1000;
   background:var(--accent);
   border-bottom:1px solid rgba(255,255,255,.15);
-  padding:10px 0;
+  padding:10px 0;   /* 新增：让导航变更高 */
 }
 .nav-wrap{
   max-width:1100px; margin:0 auto; padding:0 16px;
@@ -60,8 +60,8 @@ header h1{
   color:#fff;
   text-decoration:none;
   font-weight:600;
-  padding:16px 10px;
-  font-size:18px;
+  padding:16px 10px;   /* 加高 + 加宽点击区域，更好看 */
+  font-size:18px;      /* 让文字更明显 */
   border-bottom:2px solid transparent;
   display:inline-block;
 }
@@ -87,10 +87,10 @@ header h1{
 }
 .menu-panel a:hover{ background:#f3f3f3; }
 
-/* BANNER */
+/* BANNER - 显示完整图片 */
 .hero-banner{
   width:100%;
-  height:auto;
+  height:auto;        /* 高度自动，按比例缩放 */
   display:block;
 }
 
@@ -106,7 +106,7 @@ header h1{
   line-height:1.6;
 }
 
-/* SHOP */
+/* SHOP SECTION */
 .shop-section{
   max-width:1100px;
   margin:30px auto;
@@ -263,8 +263,7 @@ header h1{
 .faq-item.open .faq-icon{
   transform:rotate(90deg);
 }
-
-
+  
 /* FOOTER */
 footer{
   background:var(--brand);
@@ -280,7 +279,6 @@ footer a{
 }
 footer a:hover{ text-decoration:underline; }
 </style>
-
 </head>
 
 <body>
@@ -313,19 +311,19 @@ footer a:hover{ text-decoration:underline; }
   </div>
 </nav>
 
-<!-- BANNER -->
+<!-- BANNER (your uploaded image) -->
 <div id="banner">
   <img src="images/Top Bienvenue-1.jpg" alt="Animaux Care Banner" class="hero-banner">
 </div>
 
-<!-- INTRO -->
+<!-- INTRO BLOCK -->
 <div class="intro-block">
   <h2>Bienvenue chez PawCare ! </h2>
-  <p class="subtitle">Plus qu'un simple service, une seconde famille pour eux.</p>
-  <p>
-    Nous savons que votre animal est unique. C'est pourquoi nous offrons des services sur-mesure pour son bonheur et votre tranquillité d'esprit.
-    Que ce soit pour une <strong>promenade sportive</strong>, une <strong>garde câline</strong> ou une <strong>mise en beauté</strong>, nous sommes là pour vous.
-  </p>
+        <p class="subtitle">Plus qu'un simple service, une seconde famille pour eux.</p>
+        <p>
+          Nous savons que votre animal est unique. C'est pourquoi nous offrons des services sur-mesure pour son bonheur et votre tranquillité d'esprit.
+          Que ce soit pour une <strong>promenade sportive</strong>, une <strong>garde câline</strong> ou une <strong>mise en beauté</strong>, nous sommes là pour vous.
+        </p>
 </div>
 
 <!-- SHOP -->
@@ -362,24 +360,48 @@ footer a:hover{ text-decoration:underline; }
   <h2>Galerie</h2>
 
   <div class="gallery-grid">
-    <div class="gallery-card"><img src="images/gallery-1.JPG"></div>
-    <div class="gallery-card"><img src="images/gallery-2.jpg"></div>
-    <div class="gallery-card"><img src="images/gallery-3.jpg"></div>
-    <div class="gallery-card"><img src="images/gallery-4.jpg"></div>
-    <div class="gallery-card"><img src="images/gallery-5.jpg"></div>
 
     <div class="gallery-card">
-      <video controls><source src="images/IMG_2317.mp4"></video>
+      <img src="images/gallery-1.JPG" alt="Galerie image 1">
     </div>
+
     <div class="gallery-card">
-      <video controls><source src="images/IMG_2318.mp4"></video>
+      <img src="images/gallery-2.jpg" alt="Galerie image 2">
     </div>
+
     <div class="gallery-card">
-      <video controls><source src="images/IMG_7992.mp4"></video>
+      <img src="images/gallery-3.jpg" alt="Galerie image 3">
     </div>
+
+    <div class="gallery-card">
+      <img src="images/gallery-4.jpg" alt="Galerie image 4">
+    </div>
+
+    <div class="gallery-card">
+      <img src="images/gallery-5.jpg" alt="Galerie image 5">
+    </div>
+
+    <div class="gallery-card">
+  <video controls>
+    <source src="images/IMG_2317.mp4" type="video/mp4">
+  </video>
+    </div>
+
+ <div class="gallery-card">
+  <video controls>
+    <source src="images/IMG_2318.mp4" type="video/mp4">
+  </video>
+    </div>
+
+    <div class="gallery-card">
+  <video controls>
+    <source src="images/IMG_7992.mp4" type="video/mp4">
+  </video>
+    </div>
+
+    
   </div>
 </section>
-
 
 <!-- 🟫🟫🟫 FAQ SECTION (NEW) 🟫🟫🟫 -->
 <section id="faq" class="faq-section">
@@ -472,7 +494,6 @@ document.querySelectorAll(".faq-item").forEach(item=>{
 });
 </script>
 
-
 <!-- FOOTER -->
 <footer>
   <a href="mailto:contact@AnimauxCare.com">Contact</a> |
@@ -484,6 +505,3 @@ document.querySelectorAll(".faq-item").forEach(item=>{
 
 </body>
 </html>
-
-
-
