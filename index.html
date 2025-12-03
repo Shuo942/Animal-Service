@@ -39,7 +39,12 @@ header h1{
   font-family:'Comic Sans MS', cursive;
   font-size:32px;
 }
-
+.site-logo {
+  width: 50px;   /* 调整 logo 大小 */
+  height: auto;
+  vertical-align: middle; /* 与标题垂直对齐 */
+  margin-right: 10px;      /* logo 与标题间距 */
+}
 /* NAVIGATION */
 .topnav{
   position:sticky;top:0;z-index:1000;
@@ -300,6 +305,7 @@ footer p{
 <body>
 
 <header>
+  <img src="images/logo.png" alt="Animaux Care Logo" class="site-logo">
   <h1>🐾 Animaux Care – Santé & Prévention 🐾</h1>
 </header>
 
