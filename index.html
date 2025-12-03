@@ -31,18 +31,17 @@ body{
 header{
   background: var(--brand);
   color: #fff;
-  text-align: center;       /* 保持整体居中 */
+  position: relative;       /* 为 logo 定位做准备 */
   padding: 14px 0;
-}
-
-.header-content {
-  display: inline-flex;     /* 水平排列 logo + 标题 */
-  align-items: center;      /* 垂直居中 */
-  gap: 10px;                /* logo 与标题间距 */
+  text-align: center;       /* 标题居中 */
 }
 
 .site-logo {
-  width: 50px;              /* 调整 logo 大小 */
+  position: absolute;       /* 固定在 header 左上角 */
+  left: 16px;               /* 距离左边边距 */
+  top: 50%;                 /* 垂直居中 header */
+  transform: translateY(-50%);
+  width: 50px;
   height: auto;
 }
 
@@ -52,15 +51,12 @@ header h1{
   font-size: 32px;
 }
 
-/* 响应式：小屏幕缩小 logo 和标题字体 */
+/* 响应式调整 */
 @media (max-width:768px){
-  .site-logo {
-    width: 40px;
-  }
-  header h1 {
-    font-size: 28px;
-  }
+  .site-logo { width: 40px; }
+  header h1 { font-size: 28px; }
 }
+
   
 /* NAVIGATION */
 .topnav{
