@@ -29,22 +29,39 @@ body{
 
 /* HEADER */
 header{
-  background:var(--brand);
-  color:#fff;
-  text-align:center;
-  padding:14px 0;
+  background: var(--brand);
+  color: #fff;
+  text-align: center;       /* 保持整体居中 */
+  padding: 14px 0;
 }
-header h1{
-  margin:0;
-  font-family:'Comic Sans MS', cursive;
-  font-size:32px;
+
+.header-content {
+  display: inline-flex;     /* 水平排列 logo + 标题 */
+  align-items: center;      /* 垂直居中 */
+  gap: 10px;                /* logo 与标题间距 */
 }
+
 .site-logo {
-  width: 50px;   /* 调整 logo 大小 */
+  width: 50px;              /* 调整 logo 大小 */
   height: auto;
-  vertical-align: middle; /* 与标题垂直对齐 */
-  margin-right: 10px;      /* logo 与标题间距 */
 }
+
+header h1{
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 32px;
+}
+
+/* 响应式：小屏幕缩小 logo 和标题字体 */
+@media (max-width:768px){
+  .site-logo {
+    width: 40px;
+  }
+  header h1 {
+    font-size: 28px;
+  }
+}
+  
 /* NAVIGATION */
 .topnav{
   position:sticky;top:0;z-index:1000;
@@ -305,8 +322,10 @@ footer p{
 <body>
 
 <header>
-  <img src="images/logo.png" alt="Animaux Care Logo" class="site-logo">
-  <h1>🐾 Animaux Care – Santé & Prévention 🐾</h1>
+  <div class="header-content">
+    <img src="images/logo.png" alt="Animaux Care Logo" class="site-logo">
+    <h1>🐾 Animaux Care – Santé & Prévention</h1>
+  </div>
 </header>
 
 <!-- NAVIGATION -->
