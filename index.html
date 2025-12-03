@@ -8,12 +8,12 @@
 
 <style>
 :root{
-  --brand:#A8642D;       /* Header/Footer brown */
+  --brand:#A8642D;       /* Brun du header/footer */
   --accent:#C07A3F;      /* Navigation */
-  --bg:#F6EBD8;          /* Cream background */
-  --ink:#4B3A2E;         /* Text brown */
-  --card:#FFFDF9;        /* White-cream cards */
-  --btn:#C07A3F;         /* Warm brown button */
+  --bg:#F6EBD8;          /* Fond crème */
+  --ink:#4B3A2E;         /* Texte brun */
+  --card:#FFFDF9;        /* Cartes blanc-crème */
+  --btn:#C07A3F;         /* Bouton brun chaud */
   --btn-hover:#A8642D;
 }
 
@@ -31,15 +31,15 @@ body{
 header{
   background: var(--brand);
   color: #fff;
-  position: relative;       /* 为 logo 定位做准备 */
+  position: relative;       /* Préparation pour le positionnement du logo */
   padding: 14px 0;
-  text-align: center;       /* 标题居中 */
+  text-align: center;       /* Centrage du titre */
 }
 
 .site-logo {
-  position: absolute;       /* 固定在 header 左上角 */
-  left: 16px;               /* 距离左边边距 */
-  top: 50%;                 /* 垂直居中 header */
+  position: absolute;       /* Positionné dans l’angle supérieur gauche du header */
+  left: 16px;               /* Distance par rapport au bord gauche */
+  top: 50%;                 /* Aligné verticalement au centre du header */
   transform: translateY(-50%);
   width: 50px;
   height: auto;
@@ -51,7 +51,7 @@ header h1{
   font-size: 32px;
 }
 
-/* 响应式调整 */
+/* Ajustements responsives */
 @media (max-width:768px){
   .site-logo { width: 40px; }
   header h1 { font-size: 28px; }
@@ -63,7 +63,7 @@ header h1{
   position:sticky;top:0;z-index:1000;
   background:var(--accent);
   border-bottom:1px solid rgba(255,255,255,.15);
-  padding:10px 0;   /* 新增：让导航变更高 */
+  padding:10px 0;   /* Ajout : rend la navigation plus haute */
 }
 .nav-wrap{
   max-width:1100px; margin:0 auto; padding:0 16px;
@@ -78,14 +78,14 @@ header h1{
   color:#fff;
   text-decoration:none;
   font-weight:600;
-  padding:10px 6px;   /* 加高 + 加宽点击区域，更好看 */
-  font-size:16px;      /* 让文字更明显 */
+  padding:10px 6px;   /* Plus haut + zone cliquable élargie, esthétique améliorée */
+  font-size:16px;      /* Rend le texte plus visible */
   border-bottom:2px solid transparent;
   display:inline-block;
 }
 .nav-list a:hover{ border-bottom-color:#fff; }
 
-/* DROPDOWN *//* 下拉菜单 Guides */
+/* DROPDOWN *//* Menu déroulant Guides */
 .dropdown{ position:relative; }
 .menu-panel{
   opacity:0;
@@ -112,10 +112,10 @@ header h1{
 }
 .menu-panel a:hover{ background:#f3f3f3; }
 
-/* BANNER - 显示完整图片 */
+/* BANNER - Affiche l’image en entier */
 .hero-banner{
   width:100%;
-  height:auto;        /* 高度自动，按比例缩放 */
+  height:auto;        /* Hauteur automatique, garde les proportions */
   display:block;
 }
 
@@ -137,7 +137,7 @@ header h1{
 }
   
 /* ARTICLE / WEB DOCUMENTAIRE */
-/* 去掉大框：只保留宽度和排版 */
+/* Suppression du grand cadre : garde uniquement la largeur et la mise en page */
 .main-article{
   max-width:1100px;
   margin:10px auto 30px;
@@ -304,7 +304,7 @@ footer p{
   margin:6px 0;
 }
 
-/* 简单响应式 */
+/* Responsive simple */
 @media (max-width:768px){
   .faq-question{
     font-size:16px;
@@ -330,7 +330,7 @@ footer p{
     <ul class="nav-list">
       <li><a href="#banner">Accueil</a></li>
 
- <!-- 下拉菜单：Guides = 4 个板块 -->
+ <!-- Menu déroulant : Guides = 4 sections -->
       <li class="dropdown">
         <a href="#">Guides ▼</a>
         <div class="menu-panel">
@@ -349,7 +349,7 @@ footer p{
   </div>
 </nav>
 
-<!-- BANNER (your uploaded image) -->
+<!-- BANNER (votre image téléchargée) -->
 <div id="banner">
   <img src="images/Top Bienvenue-1.jpg" alt="Animaux Care Banner" class="hero-banner">
 </div>
@@ -513,7 +513,7 @@ footer p{
   </div>
 </section>
 
-<!-- 🟫🟫🟫 FAQ SECTION (NEW) 🟫🟫🟫 -->
+<!-- 🟫🟫🟫 SECTION FAQ (NOUVEAU) 🟫🟫🟫 -->
 <section id="faq" class="faq-section">
   <h2>❓ FAQ – Questions fréquentes sur la santé au quotidien</h2>
 
