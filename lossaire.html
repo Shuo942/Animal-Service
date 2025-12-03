@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Animaux Care – Glossaire</title>
+
+  <style>
+    :root{
+      --brand:#A8642D;
+      --accent:#C07A3F;
+      --bg:#F6EBD8;
+      --ink:#4B3A2E;
+      --card:#FFFDF9;
+    }
+
+    *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+
+    body{
+      margin:0;
+      font-family:'Segoe UI', Arial, sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+    }
+
+    /* HEADER */
+    header{
+      background:var(--brand);
+      color:#fff;
+      text-align:center;
+      padding:14px 0;
+    }
+    header h1{
+      margin:0;
+      font-family:'Comic Sans MS', cursive;
+      font-size:30px;
+    }
+    header p{
+      margin:4px 0 0;
+      font-size:14px;
+    }
+
+    /* NAVIGATION */
+    .topnav{
+      position:sticky;top:0;z-index:1000;
+      background:var(--accent);
+      border-bottom:1px solid rgba(255,255,255,.15);
+      padding:10px 0;
+    }
+    .nav-wrap{
+      max-width:1100px; margin:0 auto; padding:0 16px;
+      display:flex; justify-content:center;
+    }
+    .nav-list{
+      list-style:none; margin:0; padding:0;
+      display:flex; justify-content:space-evenly;
+      width:100%;
+    }
+    .nav-list a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      padding:10px 6px;
+      font-size:16px;
+      border-bottom:2px solid transparent;
+      display:inline-block;
+    }
+    .nav-list a:hover{
+      border-bottom-color:#fff;
+    }
+
+    /* Dropdown Guides */
+    .dropdown{
+      position:relative;
+    }
+    .menu-panel{
+      opacity:0;
+      visibility:hidden;
+      transform:translateY(5px);
+      position:absolute;
+      top:100%; left:0;
+      min-width:220px;
+      background:#fff;
+      border-radius:10px;
+      padding:8px;
+      box-shadow:0 6px 20px rgba(0,0,0,.15);
+      transition:.15s ease;
+    }
+    .dropdown:hover .menu-panel{
+      opacity:1;
+      visibility:visible;
+      transform:translateY(0);
+    }
+    .menu-panel a{
+      color:#444; padding:10px;
+      display:block; text-decoration:none;
+      border-radius:6px;
+      font-size:15px;
+    }
+    .menu-panel a:hover{ background:#f3f3f3; }
+
+    /* MAIN CONTENT */
+    main{
+      max-width:1100px;
+      margin:20px auto 40px;
+      padding:0 16px;
+    }
+
+    .intro-block{
+      background:var(--card);
+      padding:24px 26px;
+      border-radius:16px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.06);
+      margin-bottom:26px;
+    }
+    .intro-block h2{
+      margin-top:0;
+      font-size:24px;
+    }
+    .intro-block p{
+      font-size:16px;
+      line-height:1.7;
+    }
+
+    .glossaire-block{
+      background:#fff;
+      padding:24px 26px;
+      border-radius:16px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.05);
+    }
+    .glossaire-block h2{
+      margin-top:0;
+      font-size:22px;
+    }
+    .glossaire-block dl{
+      margin:0;
+    }
+    .glossaire-block dt{
+      font-weight:700;
+      margin-top:14px;
+      font-size:17px;
+    }
+    .glossaire-block dd{
+      margin:4px 0 6px 0;
+      font-size:15px;
+      line-height:1.7;
+    }
+    .back-links{
+      margin-top:18px;
+      font-size:14px;
+    }
+    .back-links a{
+      color:var(--accent);
+      text-decoration:none;
+    }
+    .back-links a:hover{
+      text-decoration:underline;
+    }
+
+    /* FOOTER */
+    footer{
+      background:var(--brand);
+      color:#fff;
+      text-align:center;
+      padding:22px;
+      margin-top:40px;
+      border-radius:12px 12px 0 0;
+      font-size:13px;
+    }
+    footer a{
+      color:#fff;
+      text-decoration:none;
+    }
+    footer a:hover{ text-decoration:underline; }
+    footer p{
+      margin:6px 0;
+    }
+
+    @media (max-width:768px){
+      .intro-block,
+      .glossaire-block{
+        padding:20px 16px;
+      }
+      .nav-list a{
+        font-size:14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>🐾 Animaux Care – Glossaire</h1>
+  <p>Définitions des notions clés autour de la santé et de la prévention.</p>
+</header>
+
+<!-- NAVIGATION -->
+<nav class="topnav">
+  <div class="nav-wrap">
+    <ul class="nav-list">
+      <li><a href="index.html#banner">Accueil</a></li>
+
+      <!-- Guides : renvoient vers les sections de index.html -->
+      <li class="dropdown">
+        <a href="#">Guides ▼</a>
+        <div class="menu-panel">
+          <a href="index.html#besoins">Besoins de base</a>
+          <a href="index.html#prevention">Prévention au quotidien</a>
+          <a href="index.html#securite">Sécurité maison & extérieur</a>
+          <a href="index.html#bien-etre">Bien-être émotionnel</a>
+        </div>
+      </li>
+
+      <li><a href="index.html#galerie">Galerie</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="glossaire.html">Glossaire</a></li>
+      <li><a href="bibliographie.html">Bibliographie</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+  <section class="intro-block">
+    <h2>Comment utiliser ce glossaire ?</h2>
+    <p>
+      Ce glossaire rassemble quelques notions centrales de notre web documentaire&nbsp;:
+      <em>prévention</em>, <em>enrichissement</em>, <em>routine</em>,
+      <em>signaux de stress</em> et <em>zone de retrait</em>.
+      Dans la page d’accueil, certains mots sont cliquables et renvoient directement vers la définition
+      correspondante ici.
+    </p>
+    <p>
+      L’objectif est de faciliter la lecture&nbsp;: vous pouvez d’abord parcourir les guides, puis revenir
+      sur cette page lorsqu’un terme vous semble nouveau ou ambigu.
+    </p>
+  </section>
+
+  <section class="glossaire-block">
+    <h2>Glossaire des principaux termes</h2>
+
+    <dl>
+      <dt id="g-prevention">Prévention</dt>
+      <dd>
+        Ensemble des actions destinées à réduire le risque d’apparition de problèmes de santé
+        ou de comportement chez l’animal. La prévention comprend par exemple l’observation régulière,
+        l’adaptation de l’environnement, la gestion du poids et la mise en place de routines stables.
+      </dd>
+
+      <dt id="g-enrichissement">Enrichissement</dt>
+      <dd>
+        Aménagement du milieu de vie pour stimuler les sens et les capacités de l’animal&nbsp;:
+        jeux à explorer, objets à mâcher, cachettes, arbres à chat, tapis de fouille, etc.
+        Un bon enrichissement limite l’ennui et peut réduire certains comportements indésirables.
+      </dd>
+
+      <dt id="g-routine">Routine</dt>
+      <dd>
+        Organisation régulière des journées (repas, sorties, jeux, repos) qui aide l’animal
+        à anticiper ce qui va se passer. Une routine cohérente contribue à diminuer l’incertitude
+        et donc le stress, en particulier chez les animaux sensibles.
+      </dd>
+
+      <dt id="g-signaux-stress">Signaux de stress</dt>
+      <dd>
+        Comportements ou réactions indiquant un inconfort ou une inquiétude&nbsp;:
+        halètement ou gémissements hors contexte, léchage répétitif, agitation,
+        fuite, malpropreté, baisse ou augmentation soudaine de l’appétit, etc.
+        Repérer ces signaux permet d’ajuster l’environnement ou les interactions.
+      </dd>
+
+      <dt id="g-zone-retrait">Zone de retrait</dt>
+      <dd>
+        Endroit calme où l’animal peut se reposer ou s’isoler, sans être dérangé par les bruits
+        ou les interactions. Il peut s’agir d’un panier dans une pièce peu fréquentée, d’une niche,
+        ou, pour un chat, d’un perchoir en hauteur. Respecter cette zone aide l’animal à se sentir en sécurité.
+      </dd>
+    </dl>
+
+    <div class="back-links">
+      <p>
+        ↩️ Revenir aux guides sur
+        <a href="index.html#besoins">les besoins de base</a>,
+        <a href="index.html#prevention">la prévention</a>,
+        <a href="index.html#securite">la sécurité</a> ou
+        <a href="index.html#bien-etre">le bien-être émotionnel</a>.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <a href="mailto:contact@AnimauxCare.com?subject=Question%20-%20Glossaire&body=Bonjour%2C%0AJe%20me%20permets%20de%20vous%20%C3%A9crire%20%C3%A0%20propos%20du%20glossaire%20du%20site%20Animaux%20Care.%0AMerci%20d%27avance.%0A">
+    Contact
+  </a> |
+  <a href="a-propos.html">À propos</a> |
+  <a href="mentions-legales.html">Mentions légales</a>
+
+  <p>© Animaux Care, 2025 — Fait avec ❤️ en France</p>
+</footer>
+
+</body>
+</html>
